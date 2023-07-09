@@ -31,7 +31,7 @@ const checkNumber = () => {
       answer = 'Correct';
     }
     else if (answer !== random) {
-      return `'${answer}' is wrong answer ;(. Correct answer was ${random}.\nLet's try again,${name}!`;
+      return `'${answer}' is wrong answer ;(. Correct answer was '${random}'.\nLet's try again,${name}!`;
     }
     console.log(answer);
 
