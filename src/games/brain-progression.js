@@ -1,4 +1,3 @@
-
 import readlineSync from 'readline-sync';
 
 const randomNumber = (min, max) => {  // функия по созданию случайного числа
@@ -8,7 +7,8 @@ const randomNumber = (min, max) => {  // функия по созданию сл
     return str;
 };
 
-const checkSolution = () => { // запуск функции
+
+export const checkSolution = () => { // запуск функции
     const hello = 'Welcome to the Brain Games!';
     console.log(hello);
     const answerName = readlineSync.question('May I have your name? ');
@@ -34,7 +34,7 @@ const checkSolution = () => { // запуск функции
 
         const newStringAndUpdateArr = () => { //  с помощью цикла создаем строку с новыми данными и добавдяем в существующий масив новые значения
             let str1 = '';
-            let random3 = randomNumber(3, 3);
+            let random3 = randomNumber(5, 10);
             for (let i = 1; i < random3; i++) {
                 let str2 = '';
                 str2 = str2 + arr[i] + '+' + findDifferenceInString;
@@ -70,7 +70,7 @@ const checkSolution = () => { // запуск функции
         };
         createArrComparison();
         const fixArr = createArrComparison();
-        
+
         const comparisonCheck = () => { //функия для отображения правильного ответа
             for (let i = 0; i < arrCopy1.length; i++) {
                 for (let i = 0; i < arrCopy2.length; i++) {
@@ -94,4 +94,4 @@ const checkSolution = () => { // запуск функции
         }
     }
 };
-console.log(checkSolution());
+

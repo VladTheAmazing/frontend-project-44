@@ -27,6 +27,7 @@ export const checkSolution = () => {
     for (let i = 0; i < 3; i++) {
         let random1 = randomNumberOne(0, 100);
         let random2 = randomNumberTwo(0, 100);
+        
         const addString = () => {
             let str = '';
             str = str + random1 + '%' + random2;
