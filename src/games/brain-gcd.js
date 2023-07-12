@@ -1,12 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const randomNumberOne = (min, max) => { // первая функция по созданию случайного числа
-    let str = '';
-    const r = Math.random() * (max - min) + min;
-    str = str + Math.floor(r);
-    return str;
-};
-const randomNumberTwo = (min, max) => { // вторая функия по созданию случайного числа
+const randomNumber = (min, max) => { // первая функция по созданию случайного числа
     let str = '';
     const r = Math.random() * (max - min) + min;
     str = str + Math.floor(r);
@@ -25,16 +19,16 @@ export const checkSolution = () => {
 
     const arr = [];
     for (let i = 0; i < 3; i++) {
-        let random1 = randomNumberOne(0, 100);
-        let random2 = randomNumberTwo(0, 100);
+        let random1 = randomNumber(0, 100);
+        let random2 = randomNumber(0, 100);
         
         const addString = () => {
             let str = '';
             str = str + random1 + '%' + random2;
             return str;
         };
-        console.log(addString());
-        let answerFigure = readlineSync.question('Your answer:');
+        console.log(`Question: ${addString()}`);
+        let answerFigure = readlineSync.question('Your answer: ');
 
         const checkDevider = () => {
             const cycle = random1 % random2

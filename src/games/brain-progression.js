@@ -50,10 +50,10 @@ export const checkSolution = () => { // запуск функции
         const arrCopy1 = [...arr];// создаем копию обновленного массива нужна для сравнения потом
         const lengthArr = arr.length; // записываем в константу длину массива
         arr[randomNumber(0, lengthArr)] = '..'; // заменяем в массиве элемент
-        console.log(arr + ''); // выводим как строку
+        console.log(`Question: ${arr} `); // выводим как строку
         const arrCopy2 = [...arr]; // создаем копию обновленного массива еще одну с другим уже значением
 
-        let answerFigure = readlineSync.question('Your answer:');
+        let answerFigure = readlineSync.question('Your answer: ');
 
 
         const createArrComparison = () => { // создаем массив, добавляем в него полученный ответ, для сравнения потом ниже 
