@@ -29,7 +29,7 @@ export const checkSolution = () => {
             let checkValue = Number.isInteger(value); // проверка на целотсность 
 
             if (checkValue === true) {
-                arr.push(value)
+                arr.push(value);
             }
             else if (checkValue === false) {
                 arr2.push(value);
@@ -60,4 +60,3 @@ export const checkSolution = () => {
         }
     }
 };
-

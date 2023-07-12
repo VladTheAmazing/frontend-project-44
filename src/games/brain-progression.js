@@ -94,4 +94,3 @@ export const checkSolution = () => { // запуск функции
         }
     }
 };
-
