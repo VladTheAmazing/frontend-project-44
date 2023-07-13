@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+
 const randomNumber = (min, max) => { // первая функция по созданию случайного числа
   let str = '';
   const r = Math.random() * (max - min) + min;
