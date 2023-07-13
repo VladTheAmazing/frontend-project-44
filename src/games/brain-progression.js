@@ -52,7 +52,7 @@ export const checkSolution = () => { // запуск функции
         arr[randomNumber(0, lengthArr)] = '..'; // заменяем в массиве элемент
         const arrCopy3 = [...arr]; // копия для консоли
         const takeSymbol = arrCopy3.join(' ');
-        console.log(takeSymbol); // выводим как строку
+        console.log(`Question: ${takeSymbol}`); // выводим как строку
         const arrCopy2 = [...arr]; // создаем копию обновленного массива еще одну с другим уже значением
 
         let answerFigure = readlineSync.question('Your answer: ');
