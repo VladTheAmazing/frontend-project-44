@@ -12,7 +12,7 @@ export const checkSolution = () => {
     console.log(hello);
     const answerName = readlineSync.question('May I have your name? ');
     const name = answerName;
-    const nameHello = `Hello ${answerName}!`;
+    const nameHello = `Hello, ${answerName}!`;
     console.log(nameHello);
     const questionText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     console.log(questionText);
@@ -56,7 +56,7 @@ export const checkSolution = () => {
             }
         }
         if (answerYesNo != prAndNpr()) {
-            return `'${answerYesNo}' is wrong answer ;(. Correct answer was '${prAndNpr()}'.\nLet's try again,${name}!`;
+            return `'${answerYesNo}' is wrong answer ;(. Correct answer was '${prAndNpr()}'.\nLet's try again, ${name}!`;
         }
     }
 };
