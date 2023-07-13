@@ -12,19 +12,19 @@ export const checkSolution = () => {
     console.log(hello);
     const answerName = readlineSync.question('May I have your name? ');
     const name = answerName;
-    const nameHello = `Hello ${answerName}!`;
+    const nameHello = `Hello, ${answerName}!`;
     console.log(nameHello);
     const questionText = 'Find the greatest common divisor of given numbers.';
     console.log(questionText);
 
     const arr = [];
     for (let i = 0; i < 3; i++) {
-        let random1 = randomNumber(0, 100);
-        let random2 = randomNumber(0, 100);
+        let random1 = randomNumber(1, 100);
+        let random2 = randomNumber(1, 100);
         
         const addString = () => {
             let str = '';
-            str = str + random1 + '%' + random2;
+            str = `${random1} ${random2}`;
             return str;
         };
         console.log(`Question: ${addString()}`);
@@ -51,7 +51,7 @@ export const checkSolution = () => {
             }
         }
         if ((answerFigure != checkDevider())) {
-            return `'${answerFigure}' is wrong answer ;(. Correct answer was '${checkDevider()}'.\nLet's try again,${name}!`;
+            return `'${answerFigure}' is wrong answer ;(. Correct answer was '${checkDevider()}'.\nLet's try again, ${name}!`;
         }
     }
 };
