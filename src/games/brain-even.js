@@ -10,7 +10,7 @@ export const checkNumber = () => {
     console.log(hello);
     const questionName = readlineSync.question('May I have your name? ');
     const name = questionName;
-    const nameHello = `Hello ${questionName}!`;
+    const nameHello = `Hello, ${questionName}!`;
     console.log(nameHello);
     const questionText = 'Answer "yes" if the number is even, otherwise answer "no".';
     console.log(questionText);
