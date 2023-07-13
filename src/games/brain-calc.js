@@ -18,7 +18,7 @@ export const checkAnswerFigure = () => {
   console.log(hello);
   const answerName = readlineSync.question('May I have your name? ');
   const name = answerName;
-  const nameHello = `Hello ${answerName}!`;
+  const nameHello = `Hello, ${answerName}!`;
   console.log(nameHello);
   const questionText = 'What is the result of the expression?';
   console.log(questionText);
@@ -29,7 +29,7 @@ export const checkAnswerFigure = () => {
     let fixOperetion = randomOperation(); // фиксируем символ операции
     const addString = () => {
       let str = '';
-      str = str + random1 + fixOperetion + random2; // добавляем в строку 1 число операцию и 2 число
+      str = `${random1} ${fixOperetion} ${random2}`; // добавляем в строку 1 число операцию и 2 число
       return str;
     };
     console.log(`Question: ${addString()}`); // отображаем само выражение
@@ -44,7 +44,7 @@ export const checkAnswerFigure = () => {
       }
     }
     if (calculation != answerFigure) {
-      return `'${answerFigure}' is wrong answer ;(. Correct answer was '${calculation}'.\nLet's try again,${name}!`;
+      return `'${answerFigure}' is wrong answer ;(. Correct answer was '${calculation}'.\nLet's try again, ${name}!`;
     }
   }
 };
