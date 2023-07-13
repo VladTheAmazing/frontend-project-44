@@ -13,7 +13,7 @@ export const checkSolution = () => { // запуск функции
     console.log(hello);
     const answerName = readlineSync.question('May I have your name? ');
     const name = answerName;
-    const nameHello = `Hello ${answerName}!`;
+    const nameHello = `Hello, ${answerName}!`;
     console.log(nameHello);
     const questionText = 'What number is missing in the progression?';
     console.log(questionText);
@@ -42,7 +42,7 @@ export const checkSolution = () => { // запуск функции
                 str1 = `${change}`;
                 arr.push(change);
             }
-            const str3 = `${arr[0]},${arr[1]}${str1}`;
+            const str3 = `${arr[0]}${arr[1]}${str1}`;
             return str3
         };
         newStringAndUpdateArr();
@@ -50,7 +50,9 @@ export const checkSolution = () => { // запуск функции
         const arrCopy1 = [...arr];// создаем копию обновленного массива нужна для сравнения потом
         const lengthArr = arr.length; // записываем в константу длину массива
         arr[randomNumber(0, lengthArr)] = '..'; // заменяем в массиве элемент
-        console.log(`Question: ${arr} `); // выводим как строку
+        const arrCopy3 = [...arr]; // копия для консоли
+        const takeSymbol = arrCopy3.join(' ');
+        console.log(takeSymbol); // выводим как строку
         const arrCopy2 = [...arr]; // создаем копию обновленного массива еще одну с другим уже значением
 
         let answerFigure = readlineSync.question('Your answer: ');
@@ -90,7 +92,7 @@ export const checkSolution = () => { // запуск функции
             }
         }
         if (arrCopy1.toString() !== fixArr.toString()) {
-            return `'${answerFigure}' is wrong answer ;(. Correct answer was '${comparisonCheck()}'.\nLet's try again,${name}!`;
+            return `'${answerFigure}' is wrong answer ;(. Correct answer was '${comparisonCheck()}'.\nLet's try again, ${name}!`;
         }
     }
 };
