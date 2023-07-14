@@ -1,19 +1,19 @@
-plugins:
-  # https://github.com/jest-community/eslint-plugin-jest
-  - jest
-
-# https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
-  node: true
-
+  browser: true
+  es2021: true
 extends:
-  - 'airbnb-base'
-  - 'plugin:jest/recommended'
-
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:import/recommended
+  - airbnb
 parserOptions:
-  ecmaVersion: latest
-
-rules:
-   "no-console": "off",
-   "import/extensions": "off"
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 13
+  sourceType: module
+plugins:
+  - react
+rules: {
+  "no-console": "off",
+  "import/extensions": "off"
+  }
