@@ -1,19 +1,13 @@
 env:
   browser: true
   es2021: true
-extends:
-  - eslint:recommended
-  - plugin:react/recommended
-  - plugin:import/recommended
-  - airbnb
+extends: airbnb-base
+overrides: []
 parserOptions:
-  ecmaFeatures:
-    jsx: true
-  ecmaVersion: 13
+  ecmaVersion: latest
   sourceType: module
-plugins:
-  - react
-rules: {
+rules: {  
   "no-console": "off",
-  "import/extensions": "off"
+  "import/extensions": 0,
+  "import/newline-after-import": ["error", { "count": 2 }],
   }
