@@ -34,7 +34,7 @@ const checkSolution = () => {
       for (let z = 0; z <= cycle; z += 1) {
         const r = random1 % random2;
         if (r === 0) {
-          return random2;
+          return random2.toString();
         }
         if (r !== 0) {
           random1 = random2;
@@ -43,6 +43,7 @@ const checkSolution = () => {
       }
       return 'dd';
     };
+
     if (answerFigure === checkDevider()) {
       arr.push(answerFigure);
       if (arr.length === 3) {
