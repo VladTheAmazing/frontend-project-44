@@ -5,4 +5,5 @@ const name = () => {
   const nameHello = `Hello, ${questionName}!`;
   return nameHello;
 };
+
 export default name;
